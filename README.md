@@ -1,4 +1,4 @@
-# A statistical Analysis of Gaia's data
+# A Statistical Analysis of Gaia's data
 
 ## Introduction
 
