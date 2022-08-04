@@ -1,4 +1,4 @@
-# A Statistical Analysis of Gaia's data, estimating the distance of cluster NGC2506 using Bayes’ theorem.
+# An Analysis of Gaia's data, estimating the distance of cluster NGC2506 using Bayesian statistics.
 
 ## Introduction
 
