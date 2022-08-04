@@ -1,0 +1,42 @@
+
+Byte-by-byte Description of file: cluster_members.txt
+--------------------------------------------------------------------------------
+   Bytes Format Units    Label       Explanations
+--------------------------------------------------------------------------------
+   1- 15 F15.11 deg      RAdeg       [] Gaia DR2 right ascension (ICRS)
+                                      at Ep=2015.5 (ra)
+  17- 31 F15.11 deg      DEdeg       Gaia DR2 declination (ICRS)
+                                      at Ep=2015.5 (dec)
+  33- 51  I19   ---      Source      Gaia DR2 source_id (source_id)
+  53- 66 F14.10 deg      GLON        [] Gaia DR2 Galactic longitude (l)
+  68- 81 F14.10 deg      GLAT        Gaia DR2 Galactic latitude (b)
+  83- 92  F10.4 mas      plx         Gaia DR2 parallax (parallax)
+  94- 99  F6.4  mas    e_plx         Gaia DR2 parallax error (parallax_error)
+ 101-109  F9.3  mas/yr   pmRA        Gaia DR2 proper motion along RA (pmra)
+ 111-115  F5.3  mas/yr e_pmRA        Gaia DR2 pmRA error (pmra_error)
+ 117-125  F9.3  mas/yr   pmDE        Gaia DR2 proper motion along DE (pmdec)
+ 127-131  F5.3  mas/yr e_pmDE        Gaia DR2 pmDE error (pmdec_error)
+ 133-139  F7.4  ---      RADEcor     Gaia DR2 correlation factor (ra_dec_corr)
+ 141-147  F7.4  ---      RAPlxcor    Gaia DR2 correlation factor
+                                      (ra_parallax_corr)
+ 149-155  F7.4  ---      RApmRAcor   Gaia DR2 correlation factor (ra_pmra_corr)
+ 157-163  F7.4  ---      RApmDEcor   Gaia DR2 correlation factor (ra_pmdec_corr)
+ 165-171  F7.4  ---      DEPlxcor    Gaia DR2 correlation factor
+                                      (dec_parallax_corr)
+ 173-179  F7.4  ---      DEpmRAcor   Gaia DR2 correlation factor (dec_pmra_corr)
+ 181-187  F7.4  ---      DEpmDEcor   Gaia DR2 correlation factor
+                                      (dec_pmdec_corr)
+ 189-195  F7.4  ---      PlxpmRAcor  Gaia DR2 correlation factor
+                                      (parallax_pmra_corr)
+ 197-203  F7.4  ---      PlxpmDEcor  Gaia DR2 correlation factor
+                                      (parallax_pmdec_corr)
+ 205-211  F7.4  ---      pmRApmDEcor Gaia DR2 correlation factor
+                                      (pmra_pmdec_corr)
+ 213-215  I3    ---    o_Gmag        Gaia DR2 number of G observations
+                                      (phot_g_n_obs)
+ 217-225  F9.6  mag      Gmag        Gaia DR2 mean G magnitude (phot_g_mean_mag)
+ 227-235  F9.6  mag      BP-RP       ? Gaia DR2 BP minus RP colour null
+                                      if missing in DR2 (bp_rp)
+ 237-239  F3.1  ---      PMemb       Membership probability (proba)
+ 241-257  A17   ---      Cluster     Corresponding cluster (cluster)
+--------------------------------------------------------------------------------
