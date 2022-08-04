@@ -1,10 +1,11 @@
-# A Statistical Analysis of Gaia's data
+# A Statistical Analysis of Gaia's data, estimating the distance of cluster NGC2506 using Bayes’ theorem.
 
 ## Introduction
 
 For this project we use a data file which contains astrometric and photometric data for 401448 stars observed by the Gaia mission, 
 which have been identified as belonging to 1229 open star clusters in our galaxy. Besides measuring extremely accurate positions on the sky, Gaia provides 
-measurement of the star’s proper motion and parallax. The parallax can be used to directly estimate the distance to the star. 
+measurement of the star’s proper motion and parallax. The parallax can be used to directly estimate the distance to the star.
+
 
 The data is taken from an analysis of Gaia’s Data Release 2 (DR2), a database of 1.3 billion sources which includes the astrometric data as well as 
 photometry in 3 optical bands. The open cluster study used a sophisticated clustering analysis of the astrometric information to identify which objects 
@@ -21,3 +22,7 @@ G band `Gmag` and the photometric colour  `BP-RP`. Note that the magnitude is a 
 i.e. brighter  sources have smaller magnitudes. The cluster member data is limited to stars brighter than G magnitude 18. We use the Cluster name which
 the star is associated with and the membership probability `PMemb` which is less than 1 for a number of outlier cases that are not certain to be associated
 with that cluster.  
+
+## Code Overview
+We read the entire data file on cluster members into a Pandas dataframe and perform data cleaning. From the cleaned dataframe, we make a new dataframe for the data for cluster NGC2506, removing from it any stars with PMemb<1. We make a scatter plot of the apparent G magnitude vs BP-RP colour. We check that there are no flux-dependent biases in the parallax which might affect our results. We use the NGC2506 parallax data with Bayes’ theorem, to calculate the posterior pdf for the distance 𝑑 (in kpc) to NGC2506, using the formula 𝑑 = 1/𝑝 where 𝑝 is the parallax in milliarcsec (mas). Gaia has a known‘zero-point’ offset - a systematic error – in the parallax, so before we do our calculation we should first add a correction of 0.029 mas to the parallax measurements. We assume that the corrected parallax measurements are normally distributed about the true parallax, with standard deviation given by the errors on the parallax measurements. We plot thr posterior pdf and determine the 1-𝜎 confidence interval on the distance and plot the interval on our 
+pdf. Finally, we choose another open cluster in the data set (in this case NGC2168), remove stars with PMemb<1 and obtain the posterior distribution. Then we plot this cluster and NGC2506 on the same colour-magnitude diagram, but using absolute G magnitudes (corrected to a common distance of 10 pc)3, so that we can compare the diagrams for each cluster. For the purposes of estimating a distance, we assume the best distance for each cluster corresponds to the maximum of the posterior pdf (known as the ‘maximum likelihood estimate’). 
