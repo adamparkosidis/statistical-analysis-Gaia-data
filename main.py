@@ -79,7 +79,7 @@ cluster_df = cluster_df.dropna()
 NGC_2506= constrain_cl('NGC_2506')
 
 
-# we create a color-magnitude diagram with the apparent G magnitude in the Y-axis and the BP minus RP colour in the X-axis
+# we create a color-magnitude diagram with the apparent G magnitude in the Y-axis and the BP-RP colour in the X-axis
 
 sns.set_style('darkgrid')
 plt.figure()
